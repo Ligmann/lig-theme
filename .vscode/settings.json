@@ -1,0 +1,6 @@
+{
+    "files.exclude": {
+        "wordpress": true,
+        "node_modules": true
+    }
+}
