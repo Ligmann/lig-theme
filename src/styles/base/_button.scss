@@ -1,0 +1,29 @@
+.button {
+	padding: 18px 59px;
+	border: 0;
+	border-radius: $radius;
+	cursor: pointer;
+	&--primary {
+		color: color(white, 10);
+		background-color: color(green, 10);
+		transition: transition(color), transition(background-color), transition(box-shadow), transition(transform);
+		&:hover,
+		&:focus {
+			color: color(white, 10);
+			background-color: color(green, 20);
+			transform: translateY(-2px);
+			box-shadow: 4px 9px 12px color(grey, 10);
+		}
+	}
+	&--secondary {
+		color: color(black, 10);
+		background-color: color(white, 10);
+		border: 1px solid color(grey, 10);
+		transition: transition(box-shadow), transition(transform);
+		&:hover,
+		&:focus {
+			transform: translateY(-2px);
+			box-shadow: 4px 9px 12px color(grey, 10);
+		}
+	}
+}

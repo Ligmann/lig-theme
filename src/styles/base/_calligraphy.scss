@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Roboto:wght@400;700&display=swap');
+
+%primary-font {
+	font-family: 'Roboto', sans-serif;
+}
+%secundary-font {
+	font-family: 'Nunito', sans-serif;
+}
+.text {
+	$root : &;
+	@extend %primary-font;
+	color: color(black, 10);
+	line-height: 1;
+	&--color-secundary {
+		color: color(grey, 20);
+	}
+	&--color-tertiary  {
+		color: color(green, 10);
+	}
+	&--weight-bold {
+		font-weight: bold;
+	}
+	&--reset-anchor {
+		text-decoration: none;
+		color: inherit;
+		&:hover,
+		&:focus {
+			@extend #{$root}--reset-anchor;
+		}
+	}
+	&--header {
+		@extend %secundary-font;
+		margin: 0;
+	}
+	&--header-h2 {
+		font-size: 48px;
+		text-align: center;
+		margin-bottom: 32px;
+	}
+}

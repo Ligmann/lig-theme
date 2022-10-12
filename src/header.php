@@ -15,3 +15,4 @@
 	</head>
 	<body <?php body_class('antialiased')?>>
 		<?php wp_body_open(); ?>
+		<?php include 'views-components/navigation.php'; ?>

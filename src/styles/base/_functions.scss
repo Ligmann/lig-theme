@@ -1,0 +1,37 @@
+
+//	COLORS FUNCION PALETTE
+@function color($color, $tone: 500) {
+	@if map-has-key($palette, $color ) {
+		$color: map-get($palette, $color );
+
+		@if (type-of($color) == 'color') {
+			@return $color;
+		}
+
+		@if map-has-key($color, $tone ) {
+			$tone: map-get($color, $tone );
+			@return $tone;
+		}
+
+		@warn "unknowm color `#{$tone}` in color";
+		@return null;
+	}
+
+	@warn "unknowm color `#{$color}` in pallete";
+	@return null;
+}
+
+//	TRANSITION
+@function  transition($propert) {
+	@return $speed-trans $name-trans $propert;
+}
+
+//	SIZE PROPERTIES
+@function  size($propert) {
+	@return $propert * 8;
+}
+
+//	SIZE FONTS
+@function size-fonts($propert) {
+	@return $propert * 2px;
+};

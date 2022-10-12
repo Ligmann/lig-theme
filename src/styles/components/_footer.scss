@@ -1,0 +1,11 @@
+.footer {
+	background-color: color(grey, 10);
+	padding: 75px 0 66px;
+	&__text-box {
+		font-size: 18px;
+	}
+	&__text-right {
+		display: inline-block;
+		text-align: right;
+	}
+}
