@@ -125,6 +125,7 @@ const process_vendor_webpack = async (next) => {
     await next();
 }
 
+
 const process_sass = async (next) => {
     console.log(color.yellow("Przebudowywanie stylów szablonowych..."));
 
@@ -137,7 +138,7 @@ const process_sass = async (next) => {
     gulp.src(src)
         .pipe(gulp_sass({
             outputStyle: 'compressed',
-        }))
+        }).on('error', gulp_sass.logError))
         .pipe(prefix())
         .pipe(gulp.dest(dest));
 
